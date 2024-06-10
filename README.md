@@ -409,4 +409,22 @@ PS C:\Users\user\exercises git> git stash list
 PS C:\Users\user\exercises git> git reset --hard
 HEAD is now at edefe95 commit
 PS C:\Users\user\exercises git>
+PS C:\Users\user\exercises git> git commit -m "exercises 2"
+[dev 5de3901] exercises 2
+ 1 file changed, 410 insertions(+), 1 deletion(-)
+PS C:\Users\user\exercises git> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.97 KiB | 3.97 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/gihozoderrick/exercise.git
+   edefe95..5de3901  dev -> dev
+PS C:\Users\user\exercises git> git status
+On branch dev
+Your branch is up to date with 'orgin/dev'.
+
+nothing to commit, working tree clean
+PS C:\Users\user\exercises git>
 ```
