@@ -1030,3 +1030,836 @@ nothing to commit, working tree clean
 PS C:\Users\user\exercises git> git push
 Everything up-to-date
 PS C:\Users\user\exercises git> 
+### exercises 2###
+```bash PS C:\Users\user\exercises git> git pull
+Already up to date.
+PS C:\Users\user\exercises git> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\user\exercises git> git add .
+PS C:\Users\user\exercises git> git status
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    team.htm -> team.html
+
+PS C:\Users\user\exercises git> git commit -m "team"
+[ft/team-page 4d45d39] team
+ 1 file changed, 1 insertion(+)
+ rename team.htm => team.html (86%)
+PS C:\Users\user\exercises git> git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream orgin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\user\exercises git> git push --set-upstream orgin ft/team-page
+fatal: unable to access 'https://github.com/gihozoderrick/exercise.git/': OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 0
+PS C:\Users\user\exercises git> git status
+On branch ft/team-page
+nothing to commit, working tree clean
+PS C:\Users\user\exercises git> git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream orgin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\user\exercises git> git push --set-upstream orgin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 424 bytes | 424.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/gihozoderrick/exercise/pull/new/ft/team-page
+remote:
+To https://github.com/gihozoderrick/exercise.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'orgin/ft/team-page'.
+PS C:\Users\user\exercises git> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'orgin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\user\exercises git> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\user\exercises git> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'orgin/ft/team-page'.
+PS C:\Users\user\exercises git> git log
+commit 4d45d39abec440c68de2b07aef768caf33fbf6cd (HEAD -> ft/team-page, orgin/ft/team-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 13 23:21:29 2024 -0700
+
+commit 4d45d39abec440c68de2b07aef768caf33fbf6cd (HEAD -> ft/team-page, orgin/ft/team-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 13 23:21:29 2024 -0700
+
+    team
+
+commit 482503f7557c3e986350a590215c5a5acddfd181 (orgin/ft/service-redesign, ft/service-redesign)
+Merge: fce4f5a 636f89f
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Wed Jun 12 09:38:16 2024 -0700
+
+    merge main into service redesign
+
+commit fce4f5a6ae49d1f20b93eabbdfef93e9eea75292
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Wed Jun 12 09:04:47 2024 -0700
+
+    types of money roundering
+
+commit 636f89ffcdd322670954c93e9e8f7e0c8e70a4e5 (main, ft/contact-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:54:46 2024 -0700
+
+    merge1
+
+commit 92a5c0de475996efa3ce6458ddc690bb6413aafa
+Merge: f0ff1c5 72144ee
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:53:24 2024 -0700
+
+    merge
+
+commit f0ff1c51fb4d756c714fe0fdf1015b39f212d215
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:43:50 2024 -0700
+
+    services explained
+
+commit b7047349cbf5edcf1f69cd7b975968258da88a4a
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:25:24 2024 -0700
+
+    services detailed
+
+commit 72144ee0cc6dcb15f35df65dd59a69f8e9d02b6a (orgin/main)
+Merge: 78dd1ac b704734
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:39:10 2024 -0700
+
+    Merge pull request #2 from gihozoderrick/ft/service-redesign
+
+     services detailed
+
+commit 78dd1ac97d3b7274adc883f072916045f9d6faeb
+Merge: c9f629a d417b4e
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:05:33 2024 -0700
+
+    Merge pull request #1 from gihozoderrick/ft/bundle-2
+
+    Add new html pages to the project
+
+commit d417b4e2666fe35aca12f1e5b0f9ed040f6aef0b (orgin/ft/bundle-2, ft/bundle-2)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:40:22 2024 -0700
+
+    services page
+
+commit b50c41fb0c528c7fed938801043d73fc3ff8b42b
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:25:42 2024 -0700
+
+    services
+
+commit 5de390177f2a82af21d2168e2cafc513e8d43f49 (orgin/dev, dev)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:10:17 2024 -0700
+
+    exercises 2
+
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:25:42 2024 -0700
+
+    services
+
+commit 5de390177f2a82af21d2168e2cafc513e8d43f49 (orgin/dev, dev)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:10:17 2024 -0700
+
+    exercises 2
+
+    exercises 2
+
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:25:42 2024 -0700
+
+    services
+
+commit 5de390177f2a82af21d2168e2cafc513e8d43f49 (orgin/dev, dev)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:10:17 2024 -0700
+
+    exercises 2
+
+commit 4d45d39abec440c68de2b07aef768caf33fbf6cd (HEAD -> ft/team-page, orgin/ft/team-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 13 23:21:29 2024 -0700
+
+    team
+
+commit 482503f7557c3e986350a590215c5a5acddfd181 (orgin/ft/service-redesign, ft/service-redesign)
+Merge: fce4f5a 636f89f
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Wed Jun 12 09:38:16 2024 -0700
+
+    merge main into service redesign
+
+commit fce4f5a6ae49d1f20b93eabbdfef93e9eea75292
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Wed Jun 12 09:04:47 2024 -0700
+
+    types of money roundering
+
+commit 636f89ffcdd322670954c93e9e8f7e0c8e70a4e5 (main, ft/contact-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:54:46 2024 -0700
+
+    merge1
+
+commit 92a5c0de475996efa3ce6458ddc690bb6413aafa
+Merge: f0ff1c5 72144ee
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:53:24 2024 -0700
+
+    merge
+
+commit f0ff1c51fb4d756c714fe0fdf1015b39f212d215
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:43:50 2024 -0700
+
+    services explained
+
+commit b7047349cbf5edcf1f69cd7b975968258da88a4a
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:25:24 2024 -0700
+
+    services detailed
+
+commit 72144ee0cc6dcb15f35df65dd59a69f8e9d02b6a (orgin/main)
+Merge: 78dd1ac b704734
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:39:10 2024 -0700
+
+commit b7047349cbf5edcf1f69cd7b975968258da88a4a
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:25:24 2024 -0700
+
+    services detailed
+
+commit 72144ee0cc6dcb15f35df65dd59a69f8e9d02b6a (orgin/main)
+Merge: 78dd1ac b704734
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:39:10 2024 -0700
+
+    Merge pull request #2 from gihozoderrick/ft/service-redesign
+
+     services detailed
+
+commit 78dd1ac97d3b7274adc883f072916045f9d6faeb
+Merge: c9f629a d417b4e
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:05:33 2024 -0700
+
+    Merge pull request #1 from gihozoderrick/ft/bundle-2
+
+    Add new html pages to the project
+
+commit d417b4e2666fe35aca12f1e5b0f9ed040f6aef0b (orgin/ft/bundle-2, ft/bundle-2)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:40:22 2024 -0700
+
+    services page
+
+commit b50c41fb0c528c7fed938801043d73fc3ff8b42b
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:25:42 2024 -0700
+
+    services
+
+commit 5de390177f2a82af21d2168e2cafc513e8d43f49 (orgin/dev, dev)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:10:17 2024 -0700
+
+    exercises 2
+
+    exercises 2
+
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:25:42 2024 -0700
+
+    services
+
+commit 5de390177f2a82af21d2168e2cafc513e8d43f49 (orgin/dev, dev)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:10:17 2024 -0700
+
+    exercises 2
+
+commit 4d45d39abec440c68de2b07aef768caf33fbf6cd (HEAD -> ft/team-page, orgin/ft/team-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 13 23:21:29 2024 -0700
+
+    team
+
+commit 482503f7557c3e986350a590215c5a5acddfd181 (orgin/ft/service-redesign, ft/service-redesign)
+Merge: fce4f5a 636f89f
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Wed Jun 12 09:38:16 2024 -0700
+
+PS C:\Users\user\exercises git> git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+PS C:\Users\user\exercises git> git cherry-pick 4d45d39abec440c68de2b07aef768caf33fbf6cd
+[ft/contact-page 892f7be] team
+ Date: Thu Jun 13 23:21:29 2024 -0700
+ 1 file changed, 1 insertion(+)
+ rename team.htm => team.html (86%)
+PS C:\Users\user\exercises git>  git add contact.html
+PS C:\Users\user\exercises git> git commit -m "Adding contact"
+[ft/contact-page e4cad28] Adding contact
+ 1 file changed, 14 insertions(+)
+ create mode 100644 contact.html
+PS C:\Users\user\exercises git> git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream orgin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\user\exercises git> git push --set-upstream orgin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 748 bytes | 748.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/gihozoderrick/exercise/pull/new/ft/contact-page
+remote:
+To https://github.com/gihozoderrick/exercise.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'orgin/ft/contact-page'.
+PS C:\Users\user\exercises git> git checkout -b ft/faq-page                                                       
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\user\exercises git> git add faq.html
+PS C:\Users\user\exercises git> git commit -m "Faq"
+[ft/faq-page 692389c] Faq
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\user\exercises git> git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream orgin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\user\exercises git> git push --set-upstream orgin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 423 bytes | 423.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/gihozoderrick/exercise/pull/new/ft/faq-page
+remote:
+To https://github.com/gihozoderrick/exercise.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'orgin/ft/faq-page'.
+PS C:\Users\user\exercises git> git log
+commit 692389c96a49ca6c909b80a494acaa5e99c162f5 (HEAD -> ft/faq-page, orgin/ft/faq-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:14:41 2024 -0700
+
+    Faq
+
+commit e4cad280857ba6adcb84e18efb742493b7a926e5 (orgin/ft/contact-page, ft/contact-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:07:18 2024 -0700
+
+    Adding contact
+
+commit 892f7be2ee7efdf19781fd1f1bc718647b12641f
+PS C:\Users\user\exercises git> git revert 892f7be2ee7efdf19781fd1f1bc718647b12641f
+hint: Waiting for your editor to close the file... error: cannot spawn code--wait: No such file or directory
+error: unable to start editor 'code--wait'
+Please supply the message using either -m or -F option.
+PS C:\Users\user\exercises git> git log
+commit 692389c96a49ca6c909b80a494acaa5e99c162f5 (HEAD -> ft/faq-page, orgin/ft/faq-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:14:41 2024 -0700
+
+    Faq
+
+commit e4cad280857ba6adcb84e18efb742493b7a926e5 (orgin/ft/contact-page, ft/contact-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:07:18 2024 -0700
+
+    Adding contact
+
+commit 892f7be2ee7efdf19781fd1f1bc718647b12641f
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 13 23:21:29 2024 -0700
+
+    team
+
+commit 636f89ffcdd322670954c93e9e8f7e0c8e70a4e5 (main)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:54:46 2024 -0700
+
+    merge1
+
+commit 92a5c0de475996efa3ce6458ddc690bb6413aafa
+Merge: f0ff1c5 72144ee
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:53:24 2024 -0700
+
+    merge
+
+commit f0ff1c51fb4d756c714fe0fdf1015b39f212d215
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:43:50 2024 -0700
+
+    services explained
+
+commit 72144ee0cc6dcb15f35df65dd59a69f8e9d02b6a (orgin/main)
+Merge: 78dd1ac b704734
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:39:10 2024 -0700
+
+    Merge pull request #2 from gihozoderrick/ft/service-redesign
+
+     services detailed
+
+commit b7047349cbf5edcf1f69cd7b975968258da88a4a
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:25:24 2024 -0700
+
+    services detailed
+
+commit 78dd1ac97d3b7274adc883f072916045f9d6faeb
+Merge: c9f629a d417b4e
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:05:33 2024 -0700
+
+    Merge pull request #1 from gihozoderrick/ft/bundle-2
+
+    Add new html pages to the project
+
+commit d417b4e2666fe35aca12f1e5b0f9ed040f6aef0b (orgin/ft/bundle-2, ft/bundle-2)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:40:22 2024 -0700
+
+    services page
+
+commit b50c41fb0c528c7fed938801043d73fc3ff8b42b
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:25:42 2024 -0700
+
+    services
+
+commit 5de390177f2a82af21d2168e2cafc513e8d43f49 (orgin/dev, dev)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:10:17 2024 -0700
+
+    exercises 2
+
+commit edefe95fa7180599f3e757c1b95812c3e48baf50
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 21:16:36 2024 -0700
+
+    commit
+
+commit c9f629afc28a34987c1449f0d1d7f8ae339fead8
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 6 08:59:45 2024 -0700
+
+    all
+PS C:\Users\user\exercises git> git revert 892f7be2ee7efdf19781fd1f1bc718647b12641f
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+PS C:\Users\user\exercises git> git status
+On branch ft/faq-page
+Your branch is up to date with 'orgin/ft/faq-page'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    team.html -> team.htm
+
+PS C:\Users\user\exercises git> git commit -m "team"
+[ft/faq-page 01468ed] team
+ 1 file changed, 1 deletion(-)
+ rename team.html => team.htm (86%)
+PS C:\Users\user\exercises git> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 405 bytes | 405.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gihozoderrick/exercise.git
+   692389c..01468ed  ft/faq-page -> ft/faq-page
+PS C:\Users\user\exercises git> git log
+commit 01468edc766f167a2a24d982ef3711be7c0fcfe8 (HEAD -> ft/faq-page, orgin/ft/faq-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:29:17 2024 -0700
+
+    team
+
+commit 692389c96a49ca6c909b80a494acaa5e99c162f5
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:14:41 2024 -0700
+
+    Faq
+
+commit e4cad280857ba6adcb84e18efb742493b7a926e5 (orgin/ft/contact-page, ft/contact-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:07:18 2024 -0700
+
+    Adding contact
+
+commit 892f7be2ee7efdf19781fd1f1bc718647b12641f
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 13 23:21:29 2024 -0700
+
+    team
+
+commit 636f89ffcdd322670954c93e9e8f7e0c8e70a4e5 (main)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:54:46 2024 -0700
+
+    merge1
+
+commit 92a5c0de475996efa3ce6458ddc690bb6413aafa
+Merge: f0ff1c5 72144ee
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:53:24 2024 -0700
+
+    merge
+
+commit f0ff1c51fb4d756c714fe0fdf1015b39f212d215
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:43:50 2024 -0700
+
+    services explained
+
+commit 72144ee0cc6dcb15f35df65dd59a69f8e9d02b6a (orgin/main)
+Merge: 78dd1ac b704734
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:39:10 2024 -0700
+
+    Merge pull request #2 from gihozoderrick/ft/service-redesign
+
+     services detailed
+
+commit b7047349cbf5edcf1f69cd7b975968258da88a4a
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Mon Jun 10 22:25:24 2024 -0700
+
+    services detailed
+
+commit 78dd1ac97d3b7274adc883f072916045f9d6faeb
+Merge: c9f629a d417b4e
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Mon Jun 10 13:05:33 2024 -0700
+
+    Merge pull request #1 from gihozoderrick/ft/bundle-2
+
+    Add new html pages to the project
+
+commit d417b4e2666fe35aca12f1e5b0f9ed040f6aef0b (orgin/ft/bundle-2, ft/bundle-2)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:40:22 2024 -0700
+
+    services page
+
+commit b50c41fb0c528c7fed938801043d73fc3ff8b42b
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:25:42 2024 -0700
+
+    services
+
+commit 5de390177f2a82af21d2168e2cafc513e8d43f49 (orgin/dev, dev)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 22:10:17 2024 -0700
+
+    exercises 2
+
+commit edefe95fa7180599f3e757c1b95812c3e48baf50
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sun Jun 9 21:16:36 2024 -0700
+
+    commit
+
+commit c9f629afc28a34987c1449f0d1d7f8ae339fead8
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 6 08:59:45 2024 -0700
+
+    all
+PS C:\Users\user\exercises git> git revert 892f7be2ee7efdf19781fd1f1bc718647b12641f
+On branch ft/faq-page
+Your branch is up to date with 'orgin/ft/faq-page'.
+
+nothing to commit, working tree clean
+PS C:\Users\user\exercises git> git push
+Everything up-to-date
+PS C:\Users\user\exercises git> git status
+On branch ft/faq-page
+Your branch is up to date with 'orgin/ft/faq-page'.
+
+nothing to commit, working tree clean
+PS C:\Users\user\exercises git> git push
+Everything up-to-date
+PS C:\Users\user\exercises git> git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+PS C:\Users\user\exercises git> git checkout main
+M       README.md
+D       team.htm
+Switched to branch 'main'
+Your branch is ahead of 'orgin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\user\exercises git> git status
+On branch main
+Your branch is ahead of 'orgin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   services.html
+        deleted:    team.htm
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\user\exercises git> git add .
+PS C:\Users\user\exercises git> git status
+On branch main
+Your branch is ahead of 'orgin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        modified:   services.html
+        deleted:    team.htm
+
+PS C:\Users\user\exercises git> git commit -m "modifying main branch"
+[main 26dd5f6] modifying main branch
+ 3 files changed, 604 insertions(+), 12 deletions(-)
+ delete mode 100644 team.htm
+PS C:\Users\user\exercises git> git push
+To https://github.com/gihozoderrick/exercise.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gihozoderrick/exercise.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\user\exercises git> git pull
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 2.72 KiB | 173.00 KiB/s, done.
+From https://github.com/gihozoderrick/exercise
+   72144ee..1b8303c  main       -> orgin/main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\user\exercises git> git add .
+PS C:\Users\user\exercises git> git status
+On branch main
+Your branch and 'orgin/main' have diverged,
+and have 1 and 10 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        new file:   contact.html
+        new file:   faq.html
+        modified:   services.html
+
+PS C:\Users\user\exercises git> git push
+To https://github.com/gihozoderrick/exercise.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gihozoderrick/exercise.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\user\exercises git> git status
+On branch main
+Your branch and 'orgin/main' have diverged,
+and have 1 and 10 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        new file:   contact.html
+        new file:   faq.html
+        modified:   services.html
+
+PS C:\Users\user\exercises git> git commit -m "changes"
+[main 94704b5] changes
+PS C:\Users\user\exercises git> git push
+Enumerating objects: 13, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 6.40 KiB | 6.40 MiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/gihozoderrick/exercise.git
+   1b8303c..94704b5  main -> main
+PS C:\Users\user\exercises git> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\user\exercises git> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'orgin/main'.
+PS C:\Users\user\exercises git> git add .
+PS C:\Users\user\exercises git> git status
+On branch main
+Your branch is up to date with 'orgin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+
+PS C:\Users\user\exercises git> git commit -m "project"
+[main 23e3db6] project
+ 1 file changed, 1 insertion(+)
+PS C:\Users\user\exercises git> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gihozoderrick/exercise.git
+   94704b5..23e3db6  main -> main
+PS C:\Users\user\exercises git> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\user\exercises git> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+PS C:\Users\user\exercises git> git log
+commit 23e3db65c3eb0dfcb572d05f1fa18eb3bfd79fca (HEAD -> ft/home-page-redesign, orgin/main, main)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 08:27:21 2024 -0700
+
+    project
+
+commit 94704b5bef593849990dd134091168c91e7a8d52
+Merge: 26dd5f6 1b8303c
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 08:17:05 2024 -0700
+
+    changes
+
+commit 26dd5f6af10d7b755be40500ea0c5e720c632c50
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 08:12:58 2024 -0700
+
+    modifying main branch
+
+commit 1b8303c82686f08d08d07375a969b2b1394c5d0f
+Merge: fe4f574 01468ed
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Thu Jun 13 15:55:52 2024 -0700
+
+    Merge pull request #5 from gihozoderrick/ft/faq-page
+
+    Ft/faq page
+
+commit 01468edc766f167a2a24d982ef3711be7c0fcfe8 (orgin/ft/faq-page, ft/faq-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:29:17 2024 -0700
+
+    team
+
+commit 692389c96a49ca6c909b80a494acaa5e99c162f5
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:14:41 2024 -0700
+
+    Faq
+
+commit e4cad280857ba6adcb84e18efb742493b7a926e5 (orgin/ft/contact-page, ft/contact-page)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 00:07:18 2024 -0700
+
+    Adding contact
+
+commit 892f7be2ee7efdf19781fd1f1bc718647b12641f
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Thu Jun 13 23:21:29 2024 -0700
+
+    team
+
+commit fe4f574deaa0905187b7174d34612677f39d18ce
+Merge: b3883d1 e4cad28
+Author: gihozoderrick <167696725+gihozoderrick@users.noreply.github.com>
+Date:   Thu Jun 13 15:09:07 2024 -0700
+
+    Merge pull request #4 from gihozoderrick/ft/contact-page
+
+    Ft/contact page
+
+PS C:\Users\user\exercises git> git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+PS C:\Users\user\exercises git> git add home.html
+PS C:\Users\user\exercises git> git commit -m "menu update"
+[ft/home-page-redesign e6c4cae] menu update
+ 1 file changed, 6 insertions(+)
+PS C:\Users\user\exercises git> git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream orgin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\user\exercises git> git push --set-upstream orgin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 353 bytes | 176.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gihozoderrick/exercise/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/gihozoderrick/exercise.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'orgin/ft/home-page-redesign'.
+PS C:\Users\user\exercises git> 
+```
+
