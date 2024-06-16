@@ -1862,4 +1862,102 @@ To https://github.com/gihozoderrick/exercise.git
 branch 'ft/home-page-redesign' set up to track 'orgin/ft/home-page-redesign'.
 PS C:\Users\user\exercises git> 
 ```
+### exercises 2 ###
+```bash PS C:\Users\user\exercises git> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\user\exercises git> git add footer.html
+PS C:\Users\user\exercises git> git commit -m "add footer"
+[ft/footer c1a811c] add footer
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\user\exercises git> git add .
+PS C:\Users\user\exercises git> git commit -m "edited footer"
+[ft/footer 90be55a] edited footer
+ 1 file changed, 5 insertions(+)
+PS C:\Users\user\exercises git> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\user\exercises git> git push orgin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 766 bytes | 153.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/gihozoderrick/exercise/pull/new/ft/footer
+remote:
+To https://github.com/gihozoderrick/exercise.git
+ * [new branch]      ft/footer -> ft/footer
+PS C:\Users\user\exercises git> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'orgin/main'.
+PS C:\Users\user\exercises git> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\user\exercises git> git merge --squash ft/footer   
+Updating d8123f4..90be55a
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\user\exercises git> git log 
+commit d8123f4698299edd28d27faaef2f9ead0bbbe7b3 (HEAD -> ft/squashing, orgin/main, git-copy/main, main)
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Sat Jun 15 08:56:16 2024 -0700
+
+    Added home description
+
+commit 23e3db65c3eb0dfcb572d05f1fa18eb3bfd79fca
+Author: Gihozo Derrick <gihozoderic@gmail.com>
+Date:   Fri Jun 14 08:27:21 2024 -0700
+
+    project
+PS C:\Users\user\exercises git> git commit -m footer changes squashing
+error: pathspec 'changes' did not match any file(s) known to git
+error: pathspec 'squashing' did not match any file(s) known to git
+PS C:\Users\user\exercises git> git commit  -m "footer changes squashing"
+[ft/squashing a5b5108] footer changes squashing
+ 1 file changed, 18 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\user\exercises git> git push orgin ft/footer
+Everything up-to-date
+PS C:\Users\user\exercises git> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\user\exercises git> git push orgin ft/footer
+fatal: unable to access 'https://github.com/gihozoderrick/exercise.git/': Could not resolve host: github.com
+PS C:\Users\user\exercises git> git push orgin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 513 bytes | 513.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/gihozoderrick/exercise/pull/new/ft/squashing
+remote:
+To https://github.com/gihozoderrick/exercise.git
+ * [new branch]      ft/squashing -> ft/squashing
+PS C:\Users\user\exercises git>
+```
+
 
